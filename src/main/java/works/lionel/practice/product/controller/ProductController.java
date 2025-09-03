@@ -20,9 +20,6 @@ public class ProductController {
         productService.createProduct(product);
     }
 
-    /**
-     * Get all products.
-     */
     @GetMapping()
     public List<ProductDTO> getAllProducts() {
         return productService.getAllProducts();
