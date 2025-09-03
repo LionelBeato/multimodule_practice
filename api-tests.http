@@ -1,0 +1,23 @@
+### Create a Product
+POST http://localhost:8080/api/products
+Content-Type: application/json
+
+{
+  "name": "Test Product",
+  "price": 99.99,
+  "description": "A product for testing"
+}
+
+### Create a Notification
+POST http://localhost:8080/api/notifications
+Content-Type: application/json
+
+{
+  "date": "2025-09-03T12:00:00",
+  "format": "email",
+  "productName": "Test Product"
+}
+
+### Get all Products
+GET http://localhost:8080/api/products
+Content-Type: application/json
