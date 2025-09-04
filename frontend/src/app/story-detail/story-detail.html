@@ -1,0 +1,44 @@
+<main class="main-card">
+  @if (story$ | async; as story) {
+  <h1>{{ story.title }}</h1>
+  <p>{{ story.content }}</p>
+  <h2>hs</h2>
+  <form [formGroup]="passageForm" (ngSubmit)="addPassage()" class="story-form">
+    <div class="form-group">
+      <label for="passage-title">Passage Title</label>
+      <input
+        id="passage-title"
+        type="text"
+        formControlName="title"
+        placeholder="Enter passage title"
+        required
+        class="form-control"
+      />
+    </div>
+    <div class="form-group">
+      <label for="passage-content">Passage Content</label>
+      <textarea
+        id="passage-content"
+        formControlName="content"
+        placeholder="Write passage content..."
+        required
+        rows="3"
+        class="form-control"
+      ></textarea>
+    </div>
+    <button type="submit" [disabled]="passageForm.invalid" class="submit-btn">
+      Add Passage
+    </button>
+  </form>
+
+  <h2>Passages</h2>
+  <div>
+    @for (passage of story.passages; track passage.id) {
+    <div class="passage">
+      <div class="passage-title">{{ passage.title }}</div>
+      <div>{{ passage.content }}</div>
+    </div>
+    }
+  </div>
+  }
+</main>

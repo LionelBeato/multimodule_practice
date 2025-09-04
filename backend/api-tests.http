@@ -21,3 +21,16 @@ Content-Type: application/json
 ### Get all Products
 GET http://localhost:8080/api/products
 Content-Type: application/json
+
+### Create a Story
+POST http://localhost:8080/api/stories
+Content-Type: application/json
+
+{
+  "title": "The Mysterious Island",
+  "content": "It was a dark and stormy night..."
+}
+
+### Get All Stories
+GET http://localhost:8080/api/stories
+Content-Type: application/json

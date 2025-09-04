@@ -39,3 +39,12 @@ jobs:
         with:
           name: build-artifacts
           path: build/libs/*.jar
+
+      - name: Build backend Docker image
+        run: docker build -t backend ./backend
+
+      - name: Build frontend Docker image
+        run: docker build -t frontend ./frontend
+
+      - name: Run Compose for integration test
+        run: docker-compose up --build --abort-on-container-exit

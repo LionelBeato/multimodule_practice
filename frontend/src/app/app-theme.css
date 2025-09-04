@@ -1,0 +1,149 @@
+/* app-theme.css: Shared modern styles for the story app */
+:root {
+  --primary-blue: #4f8cff;
+  --primary-purple: #7c5fff;
+  --accent-cyan: #5eead4;
+  --accent-pink: #f472b6;
+  --neutral-bg: #f7f8fa;
+  --neutral-card: #ffffff;
+  --neutral-border: #e5e7eb;
+  --neutral-text: #22223b;
+  --neutral-text-light: #6b7280;
+  --main-gradient: linear-gradient(135deg, #4f8cff 0%, #7c5fff 100%);
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+body,
+:host {
+  background: var(--neutral-bg);
+  color: var(--neutral-text);
+  min-height: 100vh;
+}
+
+.main-card {
+  max-width: 700px;
+  margin: 2rem auto;
+  background: var(--neutral-card);
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 32px 0 rgba(79, 140, 255, 0.08);
+  padding: 2rem 2.5rem;
+}
+
+h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--primary-purple);
+  letter-spacing: -1px;
+  background: var(--main-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  color: var(--primary-blue);
+}
+
+hr {
+  border: none;
+  border-top: 1.5px solid var(--neutral-border);
+  margin: 2rem 0 1rem 0;
+}
+
+/* Form styles */
+.story-form {
+  background: var(--neutral-bg);
+  border-radius: 1rem;
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
+  box-shadow: 0 2px 8px 0 rgba(79, 140, 255, 0.08);
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  border: 1px solid var(--neutral-border);
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+label {
+  font-weight: 600;
+  color: var(--primary-blue);
+  margin-bottom: 0.2rem;
+}
+.form-control {
+  border: 1px solid var(--neutral-border);
+  border-radius: 0.6rem;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  background: var(--neutral-card);
+  color: var(--neutral-text);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+.form-control:focus {
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 2px var(--primary-blue);
+}
+.submit-btn {
+  background: var(--main-gradient);
+  color: white;
+  border: none;
+  border-radius: 0.6rem;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px 0 rgba(79, 140, 255, 0.08);
+  transition: background 0.2s, transform 0.2s;
+}
+.submit-btn:disabled {
+  background: var(--neutral-border);
+  color: var(--neutral-text-light);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+.submit-btn:not(:disabled):hover {
+  background: linear-gradient(135deg, #5eead4 0%, #7c5fff 100%);
+  transform: translateY(-2px) scale(1.03);
+}
+
+/* Story thread styles */
+.story-thread {
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 8px 0 rgba(79, 140, 255, 0.08);
+  text-decoration: none;
+  color: var(--neutral-text);
+  display: block;
+  transition: box-shadow 0.2s, transform 0.2s, background 0.2s, color 0.2s;
+  background: var(--neutral-bg);
+}
+.story-thread.clickable:hover {
+  box-shadow: 0 4px 16px 0 rgba(124, 95, 255, 0.18);
+  transform: translateY(-2px) scale(1.02);
+  cursor: pointer;
+  background: var(--primary-purple);
+  color: white;
+}
+
+/* Passage styles */
+.passage {
+  background: var(--neutral-bg);
+  border-radius: 0.7rem;
+  padding: 0.7rem 1.2rem;
+  margin-bottom: 0.7rem;
+  box-shadow: 0 1px 4px 0 rgba(79, 140, 255, 0.05);
+}
+.passage-title {
+  color: var(--primary-blue);
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}

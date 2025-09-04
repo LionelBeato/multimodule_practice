@@ -1,0 +1,40 @@
+.main-card {
+  max-width: 700px;
+  margin: 2rem auto;
+  background: var(--neutral-card);
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 32px 0 rgba(79, 140, 255, 0.08);
+  padding: 2rem 2.5rem;
+}
+
+h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--primary-purple);
+  letter-spacing: -1px;
+  background: var(--main-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  color: var(--primary-blue);
+}
+
+.passage {
+  background: var(--neutral-bg);
+  border-radius: 0.7rem;
+  padding: 0.7rem 1.2rem;
+  margin-bottom: 0.7rem;
+  box-shadow: 0 1px 4px 0 rgba(79, 140, 255, 0.05);
+}
+.passage-title {
+  color: var(--primary-blue);
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}

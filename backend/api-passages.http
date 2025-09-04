@@ -1,0 +1,35 @@
+### Create a Passage for a Story
+POST http://localhost:8080/api/stories/1/passages
+Content-Type: application/json
+
+{
+  "id": 1,
+  "title": "Opening Scene",
+  "content": "It was a dark and stormy night...",
+  "order": 1,
+  "author": "Alice"
+}
+
+### Get All Passages for a Story
+GET http://localhost:8080/api/stories/1/passages
+Content-Type: application/json
+
+### Get Passage by ID for a Story
+GET http://localhost:8080/api/stories/1/passages/1
+Content-Type: application/json
+
+### Update Passage for a Story
+PUT http://localhost:8080/api/stories/1/passages/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "title": "Opening Scene (Edited)",
+  "content": "The storm raged on...",
+  "order": 1,
+  "author": "Alice"
+}
+
+### Delete Passage for a Story
+DELETE http://localhost:8080/api/stories/1/passages/1
+Content-Type: application/json
